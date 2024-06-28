@@ -2,6 +2,7 @@
 
 class StringCalculator
   def add(numbers)
-    0
+    return 0 unless numbers.match(/^\d+$/)
+    numbers.to_i
   end
 end

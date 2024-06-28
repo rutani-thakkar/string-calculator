@@ -12,4 +12,10 @@ RSpec.describe StringCalculator do
       expect(@str_calculator.add('')).to eq(0)
     end
   end
+
+  it 'should returns the number itself for a single number' do
+    calculator = StringCalculator.new
+    expect(@str_calculator.add('1')).to eq(1)
+    expect(@str_calculator.add('4')).to eq(4)
+  end
 end
