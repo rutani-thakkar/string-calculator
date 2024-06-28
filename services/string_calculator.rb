@@ -13,7 +13,7 @@ class StringCalculator
 
     negatives = numbs.select { |n| n < 0 }
     raise "negatives numbers not allowed: #{negatives.join(', ')}" if negatives.any?
-    numbs.sum
+    numbs.reject { |n| n > 1000 }.sum
   end
 
   def get_called_count
